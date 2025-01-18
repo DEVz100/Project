@@ -1,0 +1,277 @@
+/* body {
+    background-image: linear-gradient(to right, #57a860, #152F41);
+    color: white;
+    
+    font-family: 'Montserrat', sans-serif;
+} */
+
+.subject-title {
+    font-weight: 600;
+}
+body {
+    background-image: linear-gradient(to right, #81e2fd, #13526a);
+    background-size: 400% 400%;
+    animation: gradientFlow 10s ease infinite;
+    color: white;
+    /* background-image: url("images/pattern_bg.svg"); */
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /*                   Some of the above codes are for the background animation effect (gradiant)*/
+
+.subject {
+    text-decoration: none;
+    display: block;
+    color: white;
+    width: 100%;
+    max-width: 60%;
+    background-color: rgb(255, 255, 255, 10%);
+    border-top: 1px solid #ffffff1e;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.4em;
+    transition: all .5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(20, 235, 255, 0.644),
+        transparent
+    );
+    transition: 1.0s;
+}
+
+.subject:hover::before,
+.subject:active::before {
+    left: 100%;
+}
+
+.subject:nth-child(3) {
+    margin-top: 25px;
+    border-radius: 10px 10px 0 0;
+    border-top: none;
+}
+
+.subject:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.subject:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 255, 255, 10%);
+    transform: scale(1.05);
+}
+
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 62px);
+}
+
+.course-info {
+    margin-top: 20px;
+    display: flex;
+}
+
+.course-info>* {
+    font-size: 1.3em;
+}
+
+#sem-syllabus {
+    margin-top: -5px;
+    color: white;
+}
+
+#sem-syllabus:hover {
+    color: white;
+}
+
+.sub-img {
+    padding-bottom: 39%;
+    background: url(../images/sub5.svg);
+    background-size: cover;
+    margin-top: -30px;
+    margin-left: -70px;
+    opacity: 0.7;
+}
+
+.sem-drop {
+    margin-top: -5px;
+}
+
+#sem-title {
+    color: white;
+    text-decoration: none;
+    border: 1px rgb(21, 209, 209) solid;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-size: 0.8em;
+}
+
+#sem-title:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.sem-drop-menu {
+    padding: 0;
+    border: 0;
+}
+
+.sem-drop-menu .dropdown-item:nth-child(6) {
+    border: 0;
+}
+
+.sem-drop-menu .dropdown-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px 60px;
+    border-bottom: 1px solid #ebebebb8;
+}
+
+/* Desktop CSS */
+
+@media (min-width: 768px) {
+    .main-cont {
+        min-height: auto;
+    }
+}
+
+/* Mobile CSS */
+
+@media (max-width: 768px) {
+    .subject-title {
+        text-align: center;
+        font-size: 1.7em;
+        margin-top: 20px;
+    }
+    .course-info {
+        justify-content: center;
+    }
+    .subject {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    .sub-img {
+        padding-bottom: 75%;
+        margin-left: 0px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .sem-drop .dropdown-menu {
+        display: none;
+    }
+    .sem-drop:hover {}
+    .sem-drop:hover .dropdown-menu {
+        display: block;
+    }
+    .sem-drop .dropdown-menu {
+        margin-top: -5px;
+    }
+}
+
+/*                        Social Icons Hovering effect                */
+@keyframes socialIconDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-parent .social-icon {
+    animation: socialIconDrop 0.5s ease forwards;
+    opacity: 0;
+}
+
+.social-parent .social-icon:nth-child(1) {
+    animation-delay: 1.0s;
+}
+
+.social-parent .social-icon:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.social-parent .social-icon:nth-child(3) {
+    animation-delay: 2.0s;
+}
+
+.social-parent .social-icon:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+/* Keep the existing hover effects */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    filter: drop-shadow(0 0 8px rgb(255, 255, 255));
+    transform: scale(1.1);
+}
+
+.social-icon:hover i,
+.social-icon:hover img {
+    filter: brightness(1.2);
+}
+
+/*                 Newly Added                         */
+.modal-content {
+    background-color: #2e2a2a;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ffffff;
+}
+
+.modal-header .close {
+    color: white;
+}
+
+.theme-grid {
+    background-color: #231f1f9f;
+    padding: 15px;
+}
+
+.theme-option {
+    background-color: #3a3a3a;
+    border: 1px solid #404040;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+    background-color: #4a4a4a;
+    transform: scale(1.05);
+}
