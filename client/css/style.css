@@ -3,8 +3,8 @@
   --main-bg1: #559bbb;
   --main-bg2: #1e4e6f;
   --textColor: #000;
-  --textHoverColor: #7d7d7d;
-  --bt-bg: rgba(255, 255, 255, 0.541);
+  /* --textHoverColor: #7d7d7d;
+  --bt-bg: rgba(255, 255, 255, 0.541); */
 }
 
 .dark {
@@ -12,8 +12,8 @@
   --main-bg1: #212529;
   --main-bg2: #212529;
   --textColor: white;
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .orange {
@@ -21,8 +21,8 @@
   --main-bg1: #e7751d;
   --main-bg2: #ff8c45;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .purple {
@@ -30,8 +30,8 @@
   --main-bg1: #ef5dec;
   --main-bg2: #9f09af;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .red {
@@ -39,8 +39,8 @@
   --main-bg1: #cf5050;
   --main-bg2: #af0909;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .green {
@@ -48,8 +48,8 @@
   --main-bg1: #5a873d;
   --main-bg2: #24a433;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .yellow {
@@ -57,8 +57,8 @@
   --main-bg1: #cecb31;
   --main-bg2: #93a424;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .violet {
@@ -66,8 +66,8 @@
   --main-bg1: #735dd3;
   --main-bg2: #462fa0;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .greeny {
@@ -75,8 +75,8 @@
   --main-bg1: #a7c1be;
   --main-bg2: #199b9b;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 .white {
@@ -84,8 +84,8 @@
   --main-bg1: #97a9b9;
   --main-bg2: #31198e;
   --textColor: rgb(0, 0, 0);
-  --textHoverColor: #b2b2b2;
-  --bt-bg: rgba(36, 36, 36, 0.541);
+  /* --textHoverColor: #b2b2b2;
+  --bt-bg: rgba(36, 36, 36, 0.541); */
 }
 
 /* ?????????????????????????????????????????????????????
@@ -427,7 +427,7 @@ a {
 }
 
 .dropdown-item:hover {
-  background-color: #3a3a3a;
+  background-color: #ea0e0ecd;
   color: #fff;
   transform: translateX(5px);
 }
@@ -465,3 +465,58 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+
+/*                  Below code is to change the theme grid selection page's Background        */
+.modal-content {
+  background-color: #2e2a2a;  /* Dark background */
+  color: white;  /* Light text */
+}
+
+.modal-header {
+  border-bottom: 1px solid #ffffff;  /* Darker border */
+}
+
+.modal-header .close {
+  color: white;  /* Make close button white */
+}
+
+.theme-grid {
+  background-color: #231f1f9f;  /* Match modal background */
+  padding: 15px;
+}
+
+/* Optional: Style the theme options better */
+.theme-option {
+  background-color: #3a3a3a;  /* Slightly lighter than modal */
+  border: 1px solid #404040;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+  background-color: #4a4a4a;  /* When selecting an icon */
+  transform: scale(1.05);
+}
+
+
+/* <!-- ... For the library for study materials(Glow effect) ... --> */
+.body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  /* Add new styles for the glow effect */
+  #innertext {
+    transition: all 0.3s ease;
+  }
+  
+  #innertext:hover {
+    text-shadow: 0 0 15px rgb(255, 238, 0),
+                 0 0 25px rgb(251, 255, 0),
+                 0 0 35px rgb(255, 242, 0);
+  }
