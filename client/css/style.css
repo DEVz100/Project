@@ -117,10 +117,10 @@
 }
 
 /* Theme Preview Colors */
-.light-preview { background: linear-gradient(45deg, #f8f9fa, #e9ecef); }
+.light-preview { background: linear-gradient(45deg, #42bbdd, #187aa8); }
 .dark-preview { background: linear-gradient(45deg, #343a40, #212529); }
 .orange-preview { background: linear-gradient(45deg, #fd7e14, #e65100); }
-.purple-preview { background: linear-gradient(45deg, #6f42c1, #4527a0); }
+.purple-preview { background: linear-gradient(45deg, #a142c1, #871ba4); }
 .red-preview { background: linear-gradient(45deg, #dc3545, #b71c1c); }
 .green-preview { background: linear-gradient(45deg, #28a745, #1b5e20); }
 .yellow-preview { background: linear-gradient(45deg, #ffc107, #f57f17); }
@@ -158,7 +158,7 @@
   transition: all 0.2s ease-out;
 }
 
-body {
+/* body {
   background-image: linear-gradient(to right, var(--main-bg1), var(--main-bg2));
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -168,7 +168,20 @@ body {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+} */
+body {
+  /* background-image: linear-gradient(to right, #578FA8 , #152F41); */
+  background-image: linear-gradient(to right, var(--main-bg1), var(--main-bg2));
+  color: rgb(255, 255, 255);
+  background-image: url("../images/b3.svg") !important;
+  font-family: 'Montserrat', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--main-bg2);
+  background-blend-mode: luminosity;
 }
+
 
 a {
   cursor: pointer;
@@ -197,7 +210,8 @@ a {
 .bg-col {
   padding-bottom: 35%;
   /* min-height:50vh;  */
-  background: url(../images/nomtes_home.svg);
+  background: url(../images/.svg);
+  /* background: url(../images/nomtes_home.svg); */
   background-size: cover;
   margin-left: -20px;
 }
