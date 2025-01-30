@@ -75,7 +75,7 @@
               <div class="add-sly-group">
                 <input  type="text" id="sylUnit" placeholder="Unit" />
                 <input type="text" id="sylTitle" placeholder="Title" />
-                <textarea name="" id="sylContent" rows="5" cols="33"></textarea>
+                <textarea class="content-textarea" name="" id="sylContent" rows="5" cols="33"></textarea>
                 <button type="button" class="add-syllabus-btn" onclick="addSyllabus()">Add Syllabus</button>
               </div>
             </div>
@@ -110,8 +110,10 @@
 
         <!-- Subjects List -->
         <div class="card">
-          <h2>Subjects List</h2>
-          <div id="subjectsList" class="subjects-list"></div>
+          <h2>Subject List</h2>
+          <button class="view-switch-btn" onclick="toggleView()"></button>
+          <div id="subjectsList" class="subjects-list view-active"></div>
+          <div id="subjectsGrid" class="subjects-grid"></div>
         </div>
       </div>
       <!-- <div class="card"></div> -->
@@ -119,6 +121,5 @@
 </div>
     </div>
     <script src="script.js"></script>
- 
   </body>
 </html>

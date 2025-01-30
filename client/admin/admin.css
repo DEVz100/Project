@@ -336,17 +336,18 @@ label {
 }
 /*                style for add syllabus button           */
 .add-syllabus-btn {
-  background-color: #69d835d2;
-  color: rgb(255, 255, 255);
+  background-image:linear-gradient(to bottom right, #3afa00, #d74bdff3);
+  color: rgb(0, 0, 0);
   border: none;
   padding: 7px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 .add-syllabus-btn:hover {
-  background: #18a31ee2;
+  background-image:linear-gradient(to bottom right, #fad900, #623ceaf3);
 }
-/*                style for add notes button           */
+
+/*      style for add notes button      */
 .add-notes-btn {
   background-color: #fe7b00df;
   color: white;
@@ -356,19 +357,20 @@ label {
   cursor: pointer;
 }
 .add-notes-btn:hover {
-  background: #ba7420;
+  background: #58de15;
 }
-/*                    style for add video button           */
+
+/*      style for add video button      */
 .add-video-btn {
-  background-color: #ffd500e4; 
-  color: rgb(255, 255, 255);
+  background-color: #fff200e4; 
+  color: rgb(0, 0, 0);
   border: none;
   padding: 7px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 .add-video-btn:hover {
-  background: #c0ba0f;
+  background: #68e917;
 }
 
 .remove-btn {
@@ -383,7 +385,7 @@ label {
 .submit-btn {
   width: 100%;
   padding: 10px;
-  background: #35d03a;
+  background-image:linear-gradient(to bottom right, #5ff67b, #0a9f46);
   color: white;
   border: none;
   border-radius: 4px;
@@ -392,7 +394,30 @@ label {
 }
 
 .submit-btn:hover {
-  background: #18a31ee2;
+  background-image:linear-gradient(to bottom right, #bcf042, #35ffcd);
+  color: rgb(0, 0, 0);
+}
+
+.subjects-list,
+.subjects-grid {
+  display: none;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.164);
+  backdrop-filter: blur(1px);
+}
+
+.subjects-list.view-active {
+  display: block;
+}
+
+.subjects-grid.view-active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
 }
 
 .subjects-list {
@@ -400,7 +425,7 @@ label {
   overflow-y: auto;
   padding: 20px;
   border-radius: 12px;
-  background: rgba(251, 251, 251, 0);
+  background: rgba(255, 255, 255, 0.164);
   backdrop-filter: blur(1px);
   -ms-overflow-style: auto;  /* Show scrollbar for IE */
   scrollbar-width: thin;     /* Firefox scrollbar */
@@ -433,7 +458,7 @@ label {
 .subjects-list .subject {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 15px;
   padding: 25px;
   margin-bottom: 20px;
@@ -489,32 +514,34 @@ label {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
-
+/*    */
 .edit-btn {
-  background: linear-gradient(135deg, #2196f3, #1976d2);
-  color: white;
+  background: linear-gradient(135deg, #09f530, #1976d2);
+  color: rgb(255, 255, 255);
   box-shadow: 0 2px 10px rgba(33, 150, 243, 0.3);
 }
 
 .edit-btn:hover {
   background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: rgb(0, 0, 0);
   box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
   transform: translateY(-2px);
 }
 
 .delete-btn {
-  background: linear-gradient(135deg, #ff4444, #cc0000);
+  background: linear-gradient(135deg, #ff5b5b, #e21b1b);
   color: white;
   box-shadow: 0 2px 10px rgba(255, 68, 68, 0.3);
 }
 
 .delete-btn:hover {
-  background: linear-gradient(135deg, #cc0000, #b30000);
+  background: linear-gradient(135deg, #d81313, #c20000);
+  color: rgb(0, 0, 0);
   box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
   transform: translateY(-2px);
 }
 
-/*                       Logout Button Effects          */
+/*     Logout Button Effects          */
 .logout-btn {
   background: linear-gradient(45deg, #67fc49, #f74040);
   color: rgb(0, 0, 0);
@@ -566,16 +593,49 @@ label {
 }
 
 
+/* Style for the Notes and Video text */
+.subject-content input,
+.add-item-group input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #f6903c;
+  border-radius: 4px;
+  font-size: 14px;
+  background: rgba(213, 212, 208, 0.786);
+  color: #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 229, 255, 0.682);
+}
+
+.subject-content input:focus,
+.add-item-group input:focus {
+  outline: none;
+  border-color: #1676c5bb;
+  background: rgba(213, 208, 208, 0.766);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+.subject-content input:hover,
+.add-item-group input:hover {
+  border-color: #ffe81eef;
+  background: rgba(228, 247, 249, 0.752);   /*  Background color of hover button  */
+  box-shadow: 0 0 8px rgba(0, 195, 255, 0.592);
+}
+
+.subject-content input::placeholder,
+.add-item-group input::placeholder {
+  color: rgb(0, 0, 0);
+}
 
 /* Style for the syllabus text */
 .subject-content input,
 .add-sly-group input {
   width: 100%;
   padding: 8px;
-  border: 2px solid #50ecf1c2;
+  border: 2px solid #5aff36ec;
   border-radius: 4px;
   font-size: 14px;
-  background: rgba(207, 203, 203, 0.856);
+  background: rgba(255, 255, 255, 0.745);
   color: #000000;
   transition: all 0.3s ease;
   box-shadow: 0 0 5px rgba(0, 229, 255, 0.682);
@@ -591,18 +651,227 @@ label {
 
 .subject-content input:hover,
 .add-sly-group input:hover {
-  border-color: #2890acee;
-  background: rgba(29, 244, 140, 0.386);                      /*  Background color of hover button  */
-  box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+  border-color: #0d24cf8f;
+  background: rgba(228, 247, 249, 0.752);   /*  Background color of hover button  */
+  box-shadow: 0 0 8px rgba(0, 195, 255, 0.592);
 }
 
-/* Add a subtle glow effect */
 .subject-content input::placeholder,
 .add-sly-group input::placeholder {
   color: rgb(0, 0, 0);
 }
 
+/* Style for large textarea */
+.content-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 2px solid #51fc26fc;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(254, 255, 255, 0.693);
+  color: #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(80, 236, 241, 0.2);
+  resize: vertical;
+  font-family: inherit;
+}
 
-/* New*/
+.content-textarea:focus {
+  outline: none;
+  border-color: #1676c5bb;
+  background: rgba(240, 248, 255, 0.95);
+  box-shadow: 0 0 15px rgba(22, 118, 197, 0.3);
+}
 
+.content-textarea:hover {
+  border-color: #1a52d3cd;
+  background: rgba(193, 216, 216, 0.714);
+  box-shadow: 0 0 12px rgba(40, 144, 172, 0.4);
+}
+
+.content-textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Grid View Styles */
+.subjects-grid {
+  display: none; /* Hidden by default */
+}
+
+.subjects-grid.view-active {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.subjects-grid .subject {
+  background: linear-gradient(135deg, rgba(2, 121, 195, 0.226), rgba(71, 226, 240, 0.259));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 242, 0);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.subjects-grid .subject:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 229, 255, 0.25);
+  border-color: rgb(255, 94, 0);
+}
+
+.subjects-grid .subject h3 {
+  display: none; /* Remove subject headings */
+}
+
+.subjects-grid .subject p {
+  margin: 3px 0;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.subjects-grid .subject .subject-code {
+  background: linear-gradient(45deg, #50ecf1c2, #1676c5bb);
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.subjects-grid .subject .subject-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.subjects-grid .subject .subject-actions button {
+  flex: 1;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.8rem;
+  max-width: 80px;
+}
+
+.subjects-grid .subject .subject-actions .edit-btn {
+  background: linear-gradient(45deg, #50ecf1c2, #1642c5bb);
+  color: #000;
+}
+
+.subjects-grid .subject .subject-actions .edit-btn:hover {
+  background: linear-gradient(45deg, #40ac28ee, #75ed8f);
+  transform: translateY(-2px);
+}
+
+.subjects-grid .subject .subject-actions .delete-btn {
+  background: linear-gradient(45deg, #ff5959, #d31010e4);
+  color: white;
+}
+
+.subjects-grid .subject .subject-actions .delete-btn:hover {
+  background: linear-gradient(45deg, #cf0000, #e40707);
+  color: rgb(0, 0, 0);
+  transform: translateY(-2px);
+}
+
+/* View Switch Button */
+.view-switch-btn {
+  background: linear-gradient(45deg, #b9fa63f7, #13a705e9);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(99, 255, 32, 0.468);
+}
+
+.view-switch-btn:hover {
+  background: linear-gradient(45deg, #af52f6ee, #0d6bde);
+  color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(176, 93, 254, 0.464);
+}
+
+/* Media Query for Grid View */
+@media (max-width: 1024px) {
+  .subjects-grid.view-active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .subjects-grid.view-active {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subjects-grid.view-active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .subjects-grid.view-active {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Style for notes and video text */
+/* .notes-text,
+.video-text {
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.notes-text {
+  border-left-color: #fe7b00;
+  background: linear-gradient(to right, rgba(254, 123, 0, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+.video-text {
+  border-left-color: #ffd500;
+  background: linear-gradient(to right, rgba(255, 213, 0, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+.notes-text:hover,
+.video-text:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notes-text:hover {
+  background: linear-gradient(to right, rgba(254, 123, 0, 0.15), rgba(255, 255, 255, 0.95));
+}
+
+.video-text:hover {
+  background: linear-gradient(to right, rgba(255, 213, 0, 0.15), rgba(255, 255, 255, 0.95));
+} */
 

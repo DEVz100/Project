@@ -12,6 +12,11 @@ const formTitle = document.getElementById("formTitle");
 document.addEventListener("DOMContentLoaded", () => {
   fetchSubjects();
   setupFormSubmission();
+  // Initialize the view switch button text
+  const switchBtn = document.querySelector(".view-switch-btn");
+  if (switchBtn) {
+    switchBtn.textContent = "Grid View";
+  }
 });
 
 // Fetch subjects from the API
@@ -233,9 +238,33 @@ function renderVideos() {
     .join("");
 }
 
+// Toggle between list and grid view
+function toggleView() {
+  const listView = document.getElementById("subjectsList");
+  const gridView = document.getElementById("subjectsGrid");
+  const switchBtn = document.querySelector(".view-switch-btn");
+  
+  if (listView.classList.contains("view-active")) {
+    listView.classList.remove("view-active");
+    listView.style.display = "none";
+    gridView.classList.add("view-active");
+    gridView.style.removeProperty("display");
+    switchBtn.textContent = "List View";
+  } else {
+    gridView.classList.remove("view-active");
+    gridView.style.display = "none";
+    listView.classList.add("view-active");
+    listView.style.removeProperty("display");
+    switchBtn.textContent = "Grid View";
+  }
+}
+
 // Render subjects list
 function renderSubjects() {
   const subjectsList = document.getElementById("subjectsList");
+  const subjectsGrid = document.getElementById("subjectsGrid");
+  
+  // Render list view
   subjectsList.innerHTML = subjects
     .map(
       (subject) => `
@@ -246,13 +275,26 @@ function renderSubjects() {
             <p>Semester: ${subject.semester}</p>
           </div>
           <div class="subject-actions">
-            <button onclick="editSubject(${JSON.stringify(subject).replace(
-              /"/g,
-              "'"
-            )})">Edit</button>
-            <button onclick="deleteSubject('${
-              subject._id
-            }')" class="delete-btn">Delete</button>
+            <button onclick="editSubject(${JSON.stringify(subject).replace(/"/g, "'")})">Edit</button>
+            <button onclick="deleteSubject('${subject._id}')" class="delete-btn">Delete</button>
+          </div>
+        </div>
+      `
+    )
+    .join("");
+    
+  // Render grid view
+  subjectsGrid.innerHTML = subjects
+    .map(
+      (subject) => `
+        <div class="subject">
+          <h3>${subject.subjectName}</h3>
+          <div class="subject-code">${subject.code || 'No Code'}</div>
+          <p><strong>Branch:</strong> ${subject.branch}</p>
+          <p><strong>Semester:</strong> ${subject.semester}</p>
+          <div class="subject-actions">
+            <button class="edit-btn" onclick="editSubject(${JSON.stringify(subject).replace(/"/g, "'")})">Edit</button>
+            <button class="delete-btn" onclick="deleteSubject('${subject._id}')">Delete</button>
           </div>
         </div>
       `
@@ -330,32 +372,78 @@ async function deleteSubject(id) {
   }
 }
 
+// Add event listeners
+document
+  .getElementById("branch")
+  .addEventListener("change", updateSubjectCodes);
+document
+  .getElementById("semester")
+  .addEventListener("change", updateSubjectCodes);
 
+// Call once to initialize
+document.addEventListener("DOMContentLoaded", updateSubjectCodes);
 
+// Add event listeners for form submission
+document
+  .getElementById("subjectForm")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-function logout() {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-  window.location.href = "/login";
-}
+    console.log("Submitting subject data..."); // Debug log
 
-// Check if user is logged in and is admin
-window.addEventListener("DOMContentLoaded", () => {
-  const token = localStorage.getItem("token");
-  const user = JSON.parse(localStorage.getItem("user"));
+    const formData = {
+      branch: document.getElementById("branch").value,
+      semester: document.getElementById("semester").value,
+      subjectName: document.getElementById("subjectName").value,
+      code: document.getElementById("subjectCode").value,
+      akashUrl: document.getElementById("akashUrl").value || "",
+      bookUrl: document.getElementById("bookUrl").value || "",
+      paperAnalysisUrl:
+        document.getElementById("paperAnalysisUrl").value || "",
+      notes: notes,
+      youtube: videos,
+      syllabus: syllabus,
+    };
 
-  if (!token || !user) {
-    window.location.href = "/login";
-    return;
-  }
+    console.log("Form data:", formData); // Debug log
 
-  // Redirect non-admin users to home page
-  if (user.role !== "admin") {
-    window.location.href = "/";
-  }
-});
+    try {
+      const BASE_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:5002"
+          : "";
+      const response = await fetch(`${BASE_URL}/api/admin/subjects`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-// update the supbject names here
+      // First check if response is ok
+      if (!response.ok) {
+        let errorMessage;
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.message;
+        } catch (e) {
+          console.error("Error parsing error response:", e);
+          errorMessage = "Server connection error. Please try again.";
+        }
+        throw new Error(errorMessage);
+      }
+
+      const result = await response.json();
+      console.log("Server response:", result);
+
+      alert("Subject added successfully!");
+      location.reload();
+    } catch (error) {
+      console.error("Full error:", error);
+      console.error("Error adding subject:", error);
+      alert("Error: " + error.message);
+    }
+  });
 
 const subjectOptions = {
   CHE: {
@@ -742,3 +830,25 @@ document
       alert("Error: " + error.message);
     }
   });
+
+function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  window.location.href = "/login";
+}
+
+// Check if user is logged in and is admin
+window.addEventListener("DOMContentLoaded", () => {
+  const token = localStorage.getItem("token");
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!token || !user) {
+    window.location.href = "/login";
+    return;
+  }
+
+  // Redirect non-admin users to home page
+  if (user.role !== "admin") {
+    window.location.href = "/";
+  }
+});
