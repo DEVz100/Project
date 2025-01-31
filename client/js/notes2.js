@@ -507,7 +507,7 @@ function displaySubjectData(subjectData) {
             ${semesterSubjects
               .map(
                 (subjectName) => `
-                <a class="dropdown-item" href="notes.html?id=${generateSubjectCode(
+                <a class="dropdown-item" href="notes2.html?id=${generateSubjectCode(
                   branch,
                   semester,
                   subjectName

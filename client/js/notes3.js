@@ -267,21 +267,21 @@
 // }
 
 
-var sem1 = ["CHE 101", "CHE 102", "CHE 103", "CHE 104", "CHE 105", "CHE 106", "CHE 107", "CHE 108", "CHE 109", "CHE 110"];
-var sem2 = ["CHE 201", "CHE 202", "CHE 203", "CHE 204", "CHE 205", "CHE 206", "CHE 207", "CHE 208", "CHE 209", "CHE 210"];
-var sem3 = ["CHE 301", "CHE 302", "CHE 303", "CHE 304", "CHE 305", "CHE 306", "CHE 307", "CHE 308", "CHE 309"];
-var sem4 = ["CHE 401", "CHE 402", "CHE 403", "CHE 404", "CHE 405", "CHE 406", "CHE 407", "CHE 408", "CHE 409"];
-var sem5 = ["CHE 501", "CHE 502", "CHE 503", "CHE 504", "CHE 505", "CHE 506", "CHE 507", "CHE 508", "CHE 509"];
-var sem6 = ["CHE 601", "CHE 602", "CHE 603", "CHE 604", "CHE 605", "CHE 606", "CHE 607", "CHE 608"];
+var sem1 = ["BME 101", "BME 102", "BME 103", "BME 104", "BME 105", "BME 106", "BME 107", "BME 108", "BME 109", "BME 110"];
+var sem2 = ["BME 201", "BME 202", "BME 203", "BME 204", "BME 205", "BME 206", "BME 207", "BME 208", "BME 209", "BME 210"];
+var sem3 = ["BME 301", "BME 302", "BME 303", "BME 304", "BME 305", "BME 306", "BME 307", "BME 308", "BME 309"];
+var sem4 = ["BME 401", "BME 402", "BME 403", "BME 404", "BME 405", "BME 406", "BME 407", "BME 408", "BME 409"];
+var sem5 = ["BME 501", "BME 502", "BME 503", "BME 504", "BME 505", "BME 506", "BME 507", "BME 508", "BME 509"];
+var sem6 = ["BME 601", "BME 602", "BME 603", "BME 604", "BME 605", "BME 606", "BME 607", "BME 608"];
 
 // Get subject ID from URL
 let params = new URL(document.location).searchParams;
 let sub_id = params.get("id");
-let isCHE = sub_id?.includes("CHE");
+let isBME = sub_id?.includes("BME");
 
 async function fetchSyllabusData() {
   try {
-    // Extract branch and code from sub_id (e.g., "CHE 101")
+    // Extract branch and code from sub_id (e.g., "BME 101")
     const [branch, code] = sub_id.split(' ');
     const semester = Math.floor(parseInt(code) / 100);  // e.g., 101 -> semester 1
 
@@ -313,7 +313,7 @@ async function fetchSyllabusData() {
 // Fetch subject data from database
 async function fetchSubjectData() {
   try {
-    const branch = isCHE ? "CHE" : "CE";
+    const branch = isBME ? "BME" : "CHE";
     const semester = getSemesterFromSubId(sub_id);
     const encodedSubjectCode = encodeURIComponent(sub_id);
 
@@ -355,7 +355,7 @@ function getSemesterFromSubId(subId) {
 
 // Define subject options
 const subjectOptions = {
-  CHE: {
+  BME: {
     1: [
       "Communication Skills in English",
       "Mathematics - I",
@@ -436,7 +436,7 @@ const subjectOptions = {
 function generateSubjectCode(branch, semester, subjectName) {
   // Get the index of the subject in the semester's subjects array
   const subjectIndex = subjectOptions[branch][semester].indexOf(subjectName);
-  // Generate code like "CHE 101", "CHE 102", etc.
+  // Generate code like "BME 101", "BME 102", etc.
   const codeNumber = parseInt(semester) * 100 + (subjectIndex + 1);
   return `${branch} ${codeNumber}`;
 }
@@ -447,7 +447,7 @@ function displaySubjectData(subjectData) {
   console.log("Displaying subject data:", subjectData);
 
   const semester = getSemesterFromSubId(sub_id);
-  const branch = isCHE ? "CHE" : "CE";
+  const branch = isBME ? "BME" : "CHE";
 
   // Get predefined subjects for current branch and semester
   const semesterSubjects = subjectOptions[branch]?.[semester] || [];
@@ -508,7 +508,7 @@ function displaySubjectData(subjectData) {
             ${semesterSubjects
               .map(
                 (subjectName) => `
-                <a class="dropdown-item" href="notes.html?id=${generateSubjectCode(
+                <a class="dropdown-item" href="notes3.html?id=${generateSubjectCode(
                   branch,
                   semester,
                   subjectName
