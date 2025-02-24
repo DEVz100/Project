@@ -6,47 +6,47 @@
     <title>Note Nexus</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Tech" name="keywords" />
-    <meta content="Note Nexus - Get High quality Notes, Akash, Question Paper and videos for CHE/CE/EL/BME course" name="description"/>
+
+    <meta
+      content="Note Nexus - Get High quality Notes, Akash, Question Paper and videos for CHE/CE/EL/BME course"
+      name="description"
+    />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="./about.html" />
-    <!-- <link rel="canonical" href="https://xbotics7.github.io/Nomtes/" /> -->
-<!-- 
+
+    <link rel="canonical" href="https://xbotics7.github.io/Nomtes/" />
+
     <link href="images/favicon.ico" rel="icon" />
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon" /> -->
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!--google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-    <!-- Add particles.js library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Add anime.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />  
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/anim.css" />
-  
+    
     <!-- icon library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-175250230-2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-175250230-2");
-    </script> -->
   </head>
   <style>
 
@@ -227,30 +227,34 @@
 }
 </style>
 
+
+
   <body class="light">
-    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none;"></div>
-    <nav class="navbar navbar-expand-lg navbar-dark py-md-4 py-sm-2 mr-md-5" style="position: relative; z-index: 1;">
+    <nav class="navbar navbar-expand-lg navbar-dark py-md-4 py-sm-2 mr-md-5">
       <a class="navbar-brand" href="./">Note Nexus</a>
 
       <button
-        class="navbar-toggler ml-auto mb-2" style="border: none" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
+
+        class="navbar-toggler ml-auto mb-2"
+        style="border: none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mt-2 mt-md-0 text-center">
-          <!-- <li class="nav-item"></li>
+          <li class="nav-item"></li>
             <a class="nav-link" href="./admin/admin.html" >Admin</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="logout()">Logout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="chat-button">
-              <i class="fa fa-comments"></i> AI Chat
-            </a>
+            <a class="nav-link" href="#" onclick="logout()">Logout</a>
           </li>
           <script>
             function logout() {
@@ -258,6 +262,8 @@
               localStorage.removeItem("user");
               window.location.href = "/login";
             }
+
+            
           </script>
 
           <li class="nav-item text-center">
@@ -265,6 +271,7 @@
           </li>
 
           <li class="nav-item dropdown active">
+
             <a class="nav-link dropdown-toggle" href="./course.html" role="button">
               Courses<span class="sr-only">(current)</span>
             </a>
@@ -273,12 +280,14 @@
               <a class="dropdown-item" href="./semester1.html">CE</a>
               <a class="dropdown-item" href="./semester2.html" >EL</a>
               <a class="dropdown-item" href="./semester3.html" >BME</a>
+
             </div>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="./about.html">About Us</a>
           </li>
+
 
           <!-- Replace the mobile theme button -->
         <li class="nav-item d-lg-none">
@@ -292,45 +301,33 @@
           <i class="bi bi-palette"></i>
         </a>
 
-          <!-- <li class="nav-item d-lg-none">
-            <a class="nav-link" onclick="changePageTheme()">Change Theme</a>
-          </li>
-
-          <a
-            class="btn-theme d-none d-lg-inline-flex"
-            onclick="changePageTheme()"
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Change theme"
-            ><i class="bi bi-moon theme-icon"></i
-          ></a> -->
+        
         </ul>
       </div>
     </nav>
 
-    <section class="main_section slide-in-top" style="position: relative; z-index: 1;">
+
+    <section class="main_section slide-in-top">
       <div class="container-fluid main">
         <div class="row" style="margin: 0">
           <div class="col-md-6 bg-col order-md-2 come-in2"></div>
           <div class="col-md-6 come-in2 d-flex align-items-center flex-column my-auto">
-            <img src="images/nomtes_250.png" alt="Nomtes" class="nomtes_icon slide-in-top" style="animation-delay: 0.2s;">
-            <div id="nomtes" class="slide-in-top shatter-text" style="animation-delay: 0.4s; text-shadow: 20px 20px 10px rgba(0, 0, 0, 0.508);" data-value="NOTE NEXUS"></div>
+              <img src="images/nomtes_250.png" alt="Nomtes" class="nomtes_icon slide-in-top" style="animation-delay: 0.2s;">
+              <div id="nomtes" class="slide-in-top" style="animation-delay: 0.4s; text-shadow: 20px 20px 10px rgba(0, 0, 0, 0.508);">NOTE NEXUS</div>
               <div id="innertext" class="slide-in-top" style="animation-delay: 0.6s;">Library For Study Materials</div>
               <button class="btn mt-4 slide-in-top" style="animation-delay: 0.8s;" onclick="location.href='course.html';">
                 <i class="fa fa-book pr-2" aria-hidden="true"></i> Courses
               </button>
             </div>
+
         </div>
       </div>
 
-      <!-- <div class="d-flex come-in2 justify-content-center align-self-center mt-md-5 pos">
-      <a class="btnAndroid my-4 text-center" href="https://xbotics7.github.io/NomtesApp/" target="_blank">
-        <i class="fa fa-android pr-2"></i> Android App
-      </a>
-    </div> -->
+    
+
       <div class="social-parent come-in2">
         <a class="social-icon slide-in-top" style="animation-delay: 1.0s;" href="https://github.com/DEVz100" target="_blank">
-          <img src="./images/z5.png" alt="Xbotics7" height="26px" class="mr-3 mb-md-3">
+          <img src="./images/icon.png" alt="Xbotics7" height="26px" class="mr-3 mb-md-3">
         </a>
         <a class="social-icon slide-in-top" style="animation-delay: 1.2s;" href="https://www.instagram.com/xbotics7/" target="_blank">
           <i class="fa fa-instagram fa-lg mr-3 icons"></i>
@@ -341,8 +338,12 @@
         <a class="social-icon slide-in-top" style="animation-delay: 1.6s;" href="https://twitter.com/xbotics7" target="_blank">
           <i class="fa fa-twitter fa-lg icons"></i>
         </a>
-      </div>
+      </div> 
+   
   </section>
+
+
+ 
 
   <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -401,7 +402,7 @@
     </div>
   </div>
 
-  <div class="chat-container" id="chat-widget" style="display: none;">
+  <div class="chat-container" id="chat-widget">
     <div class="chat-header">
         <span>AI Study Assistant</span>
         <button class="minimize-btn" id="minimize-chat">−</button>
@@ -435,11 +436,6 @@
   });
 </script>
   
-
-   
-
-
-  
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
   integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -450,105 +446,93 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
 
-<script>
-  // Check if user is logged in
-  window.addEventListener('DOMContentLoaded', () => {
-      const token = localStorage.getItem('token');
-      const user = JSON.parse(localStorage.getItem('user'));
-      
-      if (!token) {
-          window.location.href = '/login';
-          return;
-      }
-  
-      // Hide admin elements if user is not admin
-      if (user.role !== 'admin') {
-          const adminElements = document.querySelectorAll('.admin-only');
-          adminElements.forEach(el => el.style.display = 'none');       
-      }
-  
-      // Ensure chat widget is hidden on page load
-      const chatWidget = document.getElementById('chat-widget');
-      chatWidget.style.display = 'none';
-  
-      // Chat button click handler
-      document.getElementById('chat-button').addEventListener('click', function(e) {
-          e.preventDefault();
-          chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
-      });
-  
-      // Minimize chat functionality
-      document.getElementById('minimize-chat').addEventListener('click', function() {
-          chatWidget.style.display = 'none';
-      });
-  });
 
-  document.getElementById('send-btn').addEventListener('click', sendMessage);
+
+
+  <script>
+    // Check if user is logged in
+    window.addEventListener('DOMContentLoaded', () => {
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user'));
+        
+        if (!token) {
+            window.location.href = '/login';
+            return;
+        }
+
+        // Hide admin elements if user is not admin
+        if (user.role !== 'admin') {
+            const adminElements = document.querySelectorAll('.admin-only');
+            adminElements.forEach(el => el.style.display = 'none');       
+        }
+    });
+
+    document.getElementById('send-btn').addEventListener('click', sendMessage);
 document.getElementById('user-input').addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-      sendMessage();
-  }
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
 });
 
 function sendMessage() {
-  const userInput = document.getElementById('user-input').value;
-  if (userInput.trim() === "") return;
+    const userInput = document.getElementById('user-input').value;
+    if (userInput.trim() === "") return;
 
-  appendMessage('user', userInput);
-  document.getElementById('user-input').value = '';
+    appendMessage('user', userInput);
+    document.getElementById('user-input').value = '';
 
-  // Call Gemini API
-  fetchGeminiResponse(userInput).then(response => {
-      appendMessage('bot', response);
-  });
+    // Call Gemini API
+    fetchGeminiResponse(userInput).then(response => {
+        appendMessage('bot', response);
+    });
 }
 
 function appendMessage(sender, message) {
-  const chatBox = document.getElementById('chat-box');
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-  messageElement.textContent = message;
-  chatBox.appendChild(messageElement);
-  chatBox.scrollTop = chatBox.scrollHeight;
+    const chatBox = document.getElementById('chat-box');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', sender);
+    messageElement.textContent = message;
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 
-  async function fetchGeminiResponse(userInput) {
-      const apiKey = 'AIzaSyBvFl6FLwoBuNqPHQtiq-3sspBhRAZ8ADo'; // Use this api key for testing
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-  
-      try {
-          const response = await fetch(apiUrl, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                  contents: [
-                      {
-                          role: 'user',
-                          parts: [
-                              {
-                                  text: userInput,
-                              },
-                          ],
-                      },
-                  ],
-              }),
-          });
-  
-          if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-  
-          const data = await response.json();
-          return data.candidates[0].content.parts[0].text; // Extract the response text
-      } catch (error) {
-          console.error('Error fetching Gemini response:', error);
-          return 'Sorry, something went wrong. Please try again.';
-      }
-  }
+    async function fetchGeminiResponse(userInput) {
+        const apiKey = 'AIzaSyBvFl6FLwoBuNqPHQtiq-3sspBhRAZ8ADo'; // Use this api key for testing
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            role: 'user',
+                            parts: [
+                                {
+                                    text: userInput,
+                                },
+                            ],
+                        },
+                    ],
+                }),
+            });
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+            return data.candidates[0].content.parts[0].text; // Extract the response text
+        } catch (error) {
+            console.error('Error fetching Gemini response:', error);
+            return 'Sorry, something went wrong. Please try again.';
+        }
+    }
 
 
-</script>
+  </script>
 </html>

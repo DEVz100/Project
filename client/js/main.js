@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
 
   // Add mouse move event listener
   text.addEventListener('mousemove', shatterText);
