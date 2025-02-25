@@ -50,73 +50,6 @@
   </head>
   <style>
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-flow: column nowrap;
-    }
-
-    /* Add these new styles */
-    .social-icon {
-      transition: all 0.3s ease;
-    }
-  
-    .social-icon:hover {
-      filter: drop-shadow(0 0 8px rgb(255, 255, 255));
-      transform: scale(1.1);
-    }
-  
-    .social-icon:hover i,
-    .social-icon:hover img {
-      filter: brightness(1.2);
-    }
-
-
-  /* Add new styles for the glow effect */
-  #innertext {
-    transition: all 0.3s ease;
-  }
-  
-  #innertext:hover {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
-                 0 0 25px rgba(255, 255, 255, 0.7),
-                 0 0 35px rgba(255, 255, 255, 0.5);
-  }
-
-  .modal-content {
-      background-color: #2e2a2a;  /* Dark background */
-      color: white;  /* Light text */
-  }
-
-  .modal-header {
-      border-bottom: 1px solid #ffffff;  /* Darker border */
-  }
-
-  .modal-header .close {
-      color: white;  /* Make close button white */
-  }
-
-  .theme-grid {
-      background-color: #231f1f9f;  /* Match modal background */
-      padding: 15px;
-  }
-
-  /* Optional: Style the theme options better */
-  .theme-option {
-      background-color: #3a3a3a;  /* Slightly lighter than modal */
-      border: 1px solid #404040;
-      color: white;
-      margin: 5px;
-      padding: 10px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-  }
-
-  .theme-option:hover {
-      background-color: #4a4a4a;  /* When selecting an icon */
-      transform: scale(1.05);
-  }
-
 /* styles for the chat bot */
 
   .chat-container {
@@ -124,14 +57,14 @@
     bottom: 20px;
             right: 100px;
             width: 350px;
-            background-color: #fff;
+            background-color: #474242;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgb(0, 0, 0);
             z-index: 1000;  
 } 
 
 .chat-header {
-            background-color: #007bff;
+            background-color: #373c37;
             color: white;
             padding: 10px;
             border-radius: 10px 10px 0 0;
@@ -143,25 +76,16 @@
         .minimize-btn {
             background: none;
             border: none;
-            color: white;
+            color: rgb(255, 255, 255);
             cursor: pointer;
-        }
-
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-    
-        .social-icon:hover {
-            filter: drop-shadow(0 0 8px rgb(255, 255, 255));
-            transform: scale(1.1);
         }
 
 #chat-box {
     height: 400px;
     overflow-y: auto;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    background-color: #f8f9fa;
+    border-bottom: 1px solid #000000;
+    background-color: #62676b;
 }
 
 .message {
@@ -173,20 +97,22 @@
 }
 
 .user {
-    background-color: #007bff;
-    color: white;
+    background-color: #0471ff;
+    color: rgb(255, 255, 255);
     margin-left: auto;
 }
 
 .bot {
-    background-color: #e9ecef;
+    background-color: #55ff33;
     color: #212529;
     margin-right: auto;
 }
 
 #user-input {
     border: none;
-    border-bottom: 1px solid #ddd;
+    background-color: #d7d8d9;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #000000;
     padding: 12px;
     width: calc(100% - 24px);
     outline: none;
@@ -205,7 +131,7 @@
   }
 
 #send-btn:hover {
-    background-color: #0056b3;
+    background-color: #30b300;
 }
 
 /* Scrollbar styling */
@@ -329,16 +255,16 @@
       </a>
     </div> -->
       <div class="social-parent come-in2">
-        <a class="social-icon slide-in-top" style="animation-delay: 1.0s;" href="https://github.com/DEVz100" target="_blank">
+        <a class="social-icon slide-in-top" style="animation-delay: 1.0s;" href="https://github.com/DEVz100/Project" target="_blank">
           <img src="./images/z5.png" alt="Xbotics7" height="26px" class="mr-3 mb-md-3">
         </a>
-        <a class="social-icon slide-in-top" style="animation-delay: 1.2s;" href="https://www.instagram.com/xbotics7/" target="_blank">
+        <a class="social-icon slide-in-top" style="animation-delay: 1.2s;" href="https://www.instagram.com/cyber_knights10k?utm_source=qr&igsh=MTRvNjYzM3F2eDZlMA==" target="_blank">
           <i class="fa fa-instagram fa-lg mr-3 icons"></i>
         </a>
         <a class="social-icon slide-in-top" style="animation-delay: 1.4s;" href="https://github.com/DEVz100" target="_blank">
           <i class="fa fa-github fa-lg my-4 mr-3 icons"></i>
         </a>
-        <a class="social-icon slide-in-top" style="animation-delay: 1.6s;" href="https://twitter.com/xbotics7" target="_blank">
+        <a class="social-icon slide-in-top" style="animation-delay: 1.6s;" href="https://x.com/Cyber_Knight10k?t=3oTicwuUM4UA5t3cbNcl-A&s=08" target="_blank">
           <i class="fa fa-twitter fa-lg icons"></i>
         </a>
       </div>

@@ -100,7 +100,7 @@ async function getSyllabusLink(semester, course) {
 async function updateSemesterContent(sem_id) {
   const syllabusLink =
     (await getSyllabusLink(sem_id, course_id)) ||
-    "https://drive.google.com/file/d/1NHEBDX6abXhIr_LQ9_7bxFPUZaANIRQV/view"; // fallback URL
+    "https://drive.google.com/file/d/1uIi_kPIOA6NzR3uTDqQDOsGWsyrLiaQ7/view?usp=drive_link"; // fallback URL
 
   switch (sem_id) {
     case "sem1":

@@ -94,7 +94,7 @@ switch (sem_id) {
     document.getElementById("sem-title").innerText = "Semester 1";
     // document.getElementById("sem-syllabus").href = "https://drive.google.com/file/d/1NHEBDX6abXhIr_LQ9_7bxFPUZaANIRQV/view";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/1uyf0GWB8uzNqAvBVlVLla9vznOISvQKK/view?usp=drive_link";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[0].className += " active";
@@ -103,7 +103,7 @@ switch (sem_id) {
     selectedSem = sem2;
     document.getElementById("sem-title").innerText = "Semester 2";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/1z_806K8prZ1XkiHzHJDN1h78YwIflwHt/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[1].className += " active";
@@ -112,7 +112,7 @@ switch (sem_id) {
     selectedSem = sem3;
     document.getElementById("sem-title").innerText = "Semester 3";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/18Ztc2JiHaPN08dQOLFaCEjebiKSLEorw/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[2].className += " active";
@@ -121,7 +121,7 @@ switch (sem_id) {
     selectedSem = sem4;
     document.getElementById("sem-title").innerText = "Semester 4";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/13z2ldJHVl6OgvuBfNmJ4qEUcJaYVuLzF/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[3].className += " active";
@@ -130,7 +130,7 @@ switch (sem_id) {
     selectedSem = sem5;
     document.getElementById("sem-title").innerText = "Semester 5";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/1eTM8sC2TeZkhZbpgdGfqUtVokICH3yeA/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[4].className += " active";
@@ -139,7 +139,7 @@ switch (sem_id) {
     selectedSem = sem6;
     document.getElementById("sem-title").innerText = "Semester 6";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/1ncmOwCpqmfWrRL2UTg_C5gN7cWB2HJOv/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[5].className += " active";
@@ -148,7 +148,7 @@ switch (sem_id) {
     selectedSem = sem1;
     document.getElementById("sem-title").innerText = "Semester 1";
     document.getElementById("sem-syllabus").href =
-      "https://drive.google.com/file/d/1NHEBDX6abXhIr_LQ9_7bxFPUZaANIRQV/view";
+      "https://drive.google.com/file/d/1qP7yr0bLw9cKsyxGbyB6ptoOQnHwP6xL/view?usp=drive_link";
     document
       .getElementsByClassName("sem-drop-menu")[0]
       .getElementsByClassName("dropdown-item")[0].className += " active";
