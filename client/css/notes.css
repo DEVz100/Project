@@ -408,7 +408,7 @@ body {
 }
 
 .subject-dropdown-menu .dropdown-item:hover {
-  background-color: rgba(225, 18, 18, 0.81);                   /*    dropdown selection color    */
+  background-color: rgba(225, 18, 18, 0.81);            
   color: var(--text-color, #fff);
   text-decoration: none;
 }
@@ -419,7 +419,7 @@ body {
 }
 
 /*                 Newly Added                         */
-.modal-content {
+/* .modal-content {
   background-color: #2e2a2a;
   color: white;
 }
@@ -450,7 +450,7 @@ body {
 .theme-option:hover {
   background-color: #4a4a4a;
   transform: scale(1.05);
-}
+} */
 
 /*                        Social Icons Hovering effect                */
 @keyframes socialIconDrop {
