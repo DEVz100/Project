@@ -47,7 +47,7 @@
   --card-bg: #ffffff;
   /* --main-bg1: #5a873d; */
   --main-bg2: #6dad5b;
-  --textColor: rgb(13, 255, 0);
+  --textColor: rgb(51, 167, 45);
   /* --textHoverColor: #b2b2b2;
   --bt-bg: rgba(36, 36, 36, 0.541); */
 }
@@ -56,7 +56,7 @@
   --card-bg: #ffffff;
   /* --main-bg1: #cecb31; */
   --main-bg2: #dbe24d;
-  --textColor: rgb(255, 238, 0);
+  --textColor: rgb(188, 178, 40);
   /* --textHoverColor: #b2b2b2;
   --bt-bg: rgba(36, 36, 36, 0.541); */
 }
@@ -74,7 +74,7 @@
   --card-bg: #ffffff;
   /* --main-bg1: #a7c1be; */
   --main-bg2: #297566;
-  --textColor: rgb(0, 255, 166);
+  --textColor: rgb(25, 160, 113);
   /* --textHoverColor: #b2b2b2;
   --bt-bg: rgba(36, 36, 36, 0.541); */
 }
@@ -628,4 +628,102 @@ body {
   white-space: pre;
   will-change: transform;
   backface-visibility: hidden;
+}
+
+
+/* Calendar Styles */
+.fc {
+  /* background-color: var(--card-bg); */
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fc-header-toolbar {
+  margin-bottom: 1.5em !important;
+}
+
+.fc-toolbar-title {
+  font-size: 1.5em !important;
+  color: var(--textColor);
+}
+
+.fc-button-primary {
+  background-color: var(--main-bg2) !important;
+  border-color: var(--main-bg2) !important;
+  transition: all 0.3s ease;
+}
+
+.fc-button-primary:hover {
+  background-color: var(--textColor) !important;
+  border-color: var(--textColor) !important;
+  opacity: 0.9;
+}
+
+.fc-button-primary:disabled {
+  background-color: #cccccc !important;
+  border-color: #cccccc !important;
+}
+
+.fc-daygrid-day {
+  transition: all 0.5s ease;
+}
+
+.fc-daygrid-day:hover {
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+.fc-daygrid-day-number {
+  color: var(--textColor);
+  padding: 8px !important;
+}
+
+.fc-day-today {
+  background-color: rgba(#433c3c73, 0.1) !important;
+}
+
+.fc-event {
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-size: 0.85em;
+  border: none !important;
+  transition: transform 0.2s ease;
+}
+
+.fc-event:hover {
+  transform: scale(1.02);
+}
+
+.fc-theme-standard td, 
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border-color: rgba(0, 0, 0, 0.847) !important;
+}
+
+/* Calendar Modal Styles */
+#calendarModal .modal-content {
+  /* background-color: var(--card-bg); */
+  background-color: #a7a4a4;
+  border-radius: 15px;
+}
+
+#calendarModal .modal-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--main-bg2);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+#calendarModal .modal-body {
+  padding: 20px;
+}
+
+#calendarModal .close {
+  color: white;
+  opacity: 0.8;
+}
+
+#calendarModal .close:hover {
+  opacity: 1;
 }

@@ -536,3 +536,127 @@ function appendMessage(sender, message) {
 
   </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+calendar
+
+
+{{ ... }}
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- Calendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+{{ ... }}
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="logout()">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#calendarModal">
+              <i class="fa fa-calendar"></i> National Calendar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="chat-button">
+{{ ... }}
+    </div>
+  </div>
+
+  <!-- Calendar Modal -->
+  <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="calendarModalLabel">National Calendar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ ... }}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Calendar JS -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,dayGridWeek'
+        },
+        events: [
+            {
+                title: 'Republic Day',
+                start: '2025-01-26',
+                color: '#FF9933'
+            },
+            {
+                title: 'Independence Day',
+                start: '2025-08-15',
+                color: '#138808'
+            },
+            {
+                title: 'Gandhi Jayanti',
+                start: '2025-10-02',
+                color: '#FF9933'
+            },
+            {
+                title: 'Diwali',
+                start: '2025-11-12',
+                color: '#FF9933'
+            },
+            {
+                title: 'Christmas',
+                start: '2025-12-25',
+                color: '#138808'
+            },
+            {
+                title: 'Holi',
+                start: '2025-03-14',
+                color: '#FF9933'
+            },
+            {
+                title: 'Raksha Bandhan',
+                start: '2025-08-10',
+                color: '#FF9933'
+            }
+        ],
+        eventClick: function(info) {
+            alert(info.event.title);
+        }
+    });
+
+    $('#calendarModal').on('shown.bs.modal', function () {
+        calendar.render();
+    });
+});
+</script>
+
+<script src="./js/main.js"></script>
+{{ ... }}
